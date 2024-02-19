@@ -9,3 +9,6 @@ a kvm based web portal for provisioning
 
 ## delete local dev vm 
 `export VM=kvm; bash delete-vm.sh`
+
+## transfer deploy-api.sh to VM
+`export VM=kvm; multipass transfer deploy-api.sh $VM:`

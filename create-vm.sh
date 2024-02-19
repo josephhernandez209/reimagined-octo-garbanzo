@@ -24,3 +24,7 @@ else
   echo "launching $VM vm"
   multipass launch --name $VM -c 4 -m 4G
 fi
+
+export VM=kvm; multipass transfer deploy-api.sh $VM:
+
+export VM=kvm; multipass shell $VM

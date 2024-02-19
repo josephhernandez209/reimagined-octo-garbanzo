@@ -6,10 +6,18 @@ else
   sudo apt install -y unzip
 fi
 
-if ($HOME/.deno/bin/deno --version)
+if (deno -V)
 then
   echo "deno already installed"
 else
   echo "installing deno"
   curl -fsSL https://deno.land/install.sh | sh
+fi
+
+if (which deno)
+then 
+  echo "deno already installed"
+else
+  echo "installing deno"
+  sudo cp $HOME/.deno/bin/deno /usr/local/bin/
 fi

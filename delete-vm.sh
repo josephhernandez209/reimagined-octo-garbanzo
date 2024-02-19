@@ -1,0 +1,1 @@
+multipass delete $VM --purge

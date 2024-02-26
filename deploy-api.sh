@@ -21,3 +21,11 @@ else
   echo "installing deno"
   sudo cp $HOME/.deno/bin/deno /usr/local/bin/
 fi
+
+if (screen -ls | grep server)
+then
+  echo "webserver already running"
+else 
+  echo "starting webserver in a screen"
+  screen -S server -d -m deno run --allow-net server.ts
+fi

@@ -27,5 +27,5 @@ then
   echo "webserver already running"
 else 
   echo "starting webserver in a screen"
-  screen -S server -d -m deno run --allow-net server.ts
+  screen -S server -d -m deno run -A main.ts
 fi

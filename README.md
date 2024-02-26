@@ -13,8 +13,8 @@ a kvm based web portal for provisioning
 ## transfer deploy-api.sh to VM
 `export VM=kvm; multipass transfer deploy-api.sh $VM:`
 
-## transfer server.ts to VM
-`export VM=kvm; multipass transfer server.ts $VM:`
+## transfer main.ts to VM
+`export VM=kvm; multipass transfer main.ts $VM:`
 
 ## start webserver service
 `deno run --allow-net server.ts`

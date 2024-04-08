@@ -20,7 +20,7 @@ then
   echo "fresh-project already created"
 else
   echo "creating fresh-project"
-  deno run -A -r https://fresh.deno.dev
+  deno run -A -r https://fresh.deno.dev  ./fresh-project --tailwind --vscode
 fi
   
 if (screen -ls | grep fresh)

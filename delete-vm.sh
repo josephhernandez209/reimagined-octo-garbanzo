@@ -1,1 +1,1 @@
-multipass delete $VM --purge
+export VM=kvm; multipass delete $VM --purge

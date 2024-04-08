@@ -17,15 +17,15 @@ else
   sleep 5
 fi
 
-if (multipass info $VM)
+if (multipass info $VM | grep Running)
 then
   echo "$VM vm already exists"
 else 
   echo "launching $VM vm"
-  multipass launch --name $VM -c 4 -m 4G
+  export VM=kvm; multipass launch --name $VM -c 4 -m 4G
 fi
 
-export VM=kvm; multipass transfer server.ts $VM:
-export VM=kvm; multipass transfer deploy-api.sh $VM:
+#export VM=kvm; multipass transfer server.ts $VM:
+export VM=kvm; multipass transfer deno.sh $VM:
 
 export VM=kvm; multipass shell $VM

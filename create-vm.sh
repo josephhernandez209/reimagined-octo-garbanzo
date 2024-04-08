@@ -25,7 +25,7 @@ else
   multipass launch --name $VM -c 4 -m 4G
 fi
 
-export VM=kvm; multipass transfer server.ts $VM:
-export VM=kvm; multipass transfer deploy-api.sh $VM:
+#export VM=kvm; multipass transfer server.ts $VM:
+export VM=kvm; multipass transfer deno.sh $VM:
 
 export VM=kvm; multipass shell $VM
